@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 global
 	log /dev/log	local0
 	log /dev/log	local1 notice
@@ -37,7 +36,7 @@ defaults
 
 frontend load_balancer
 	bind	0.0.0.0:80
-	bind	0.0.0.0:443 ssl crt /etc/ssl/www.justinmajetich.tech/www.justinmajetich.tech.pem
+	bind	0.0.0.0:443 ssl crt /etc/ssl/www.AmponsahJ99.tech/www.AmponsahJ99.tech.pem
 	mode	http
 	acl letsencrypt-acl path_beg /.well-known/acme-challenge/
 	use_backend letsencrypt-backend if letsencrypt-acl
@@ -50,5 +49,5 @@ backend letsencrypt-backend
 backend web_servers
 	balance	roundrobin
 	mode	http
-	server	1115-web-01 34.73.76.135:80
-	server	1115-web-02 18.209.20.255:80
+	server	1115-web-01 54.73.76.152:65
+	server	1115-web-02 18.208.20.255:80
